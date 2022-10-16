@@ -100,7 +100,7 @@ runcmd pip3 install --no-cache-dir -U cryptography==3.3.2
 runcmd pip3 install --no-cache-dir cffi certbot
 
 log "Checking for latest NPM release"
-set -x
+#set -x
 # Get latest version information for nginx-proxy-manager
 runcmd 'wget $WGETOPT -O ./_latest_release $NPMURL/releases/latest'
 _latest_version=$(basename $(cat ./_latest_release | grep -wo "expanded_assets/v.*\d") | cut -d'v' -f2)
